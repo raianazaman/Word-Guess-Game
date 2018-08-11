@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <title>Runway Guessing Game</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet"  href="assets/css/style.css">
+</head>
+
+
+<body>
+ <header>
+ <img id="logo" src="assets/images/Name.png" alt="logo">
+  <h1> Press any key to get started! </h1>
+ </header>
+
+<div Class="GuessBoard">
+ <div id="remainingGuess"> Number of Guess Remaining: </div><br>
+ <div id="letterguessed"> Letter already guessed:</div> <br>
+
+ <div class="Word"> The name of the fashion brand: 
+  <span class="Word" id="letters"> </spanv>
+</div><br>
+
+
+<div class="Score"> 
+  <img id="right" src="assets/images/wellDone.png" alt="Guessed Right">
+  <div id="numWins">  </div> <br>
+</div> 
+
+<div class="Score"> 
+  <img id="wrong" src="assets/images/wrongGuess.png" alt="Guessed Wrong">
+  <div id="numLoses"></div><br>
+</div>
+
+
+<script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+</html>
