@@ -4,7 +4,7 @@ LettersInWord = [];
 numBlanks = 0;
 
 blanks = [];
-remGuesses = 5;
+remGuesses = 10;
 wrongAnswers = [];
 sameLetter = [];
 
@@ -17,7 +17,7 @@ document.getElementById("remainingGuess").innerHTML = "Number of Guess Remaining
 
 function playGame() {
     blanks = [];
-    remGuesses = 5;
+    remGuesses = 10;
     wrongAnswers = [];
     sameLetter = [];
 
@@ -50,8 +50,10 @@ function matchLetters(letter) {
 
     if (sameLetter.indexOf(letter) == -1) {
         sameLetter.push(letter);
-        remGuesses--;
-    }
+       
+    } else {
+        alert("you already guessed that letter: " + letter);
+    };
 
     if (chosenWordLetters) {
         for (i = 0; i < numBlanks; i++) {
@@ -62,10 +64,9 @@ function matchLetters(letter) {
     } else {
        
         if (wrongAnswers.indexOf(letter) === -1) {
-        	wrongAnswers.push(letter);
-        } else {
-        	console.log("you already guessed that letter: " + letter);
-        };
+            wrongAnswers.push(letter);
+            remGuesses--;
+        } 
     }
 };
 
@@ -97,7 +98,4 @@ document.onkeyup = function(event) {
     matchLetters(userGuesses);
     updateGameResults();
 };
-function myFunction() {
-    var popup = document.getElementById("right");
-    popup.classList.toggle("show");
-}
+e
